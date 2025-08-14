@@ -1,0 +1,11 @@
+{
+  "devices":{
+  "Front_Gate_Camera": "192.168.1.190",
+  "Lobby_Camera": "192.168.1.191",
+  "Server_Room_Sensor": "192.168.1.192"
+}, 
+  "services": [
+    "docker.service",
+    "restart_main.service"
+  ]
+}
