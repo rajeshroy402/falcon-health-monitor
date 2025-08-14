@@ -1,4 +1,4 @@
-Of course. Here is the content of the document in raw Markdown format.
+
 
 ````markdown
 # Falcon Health Monitor
