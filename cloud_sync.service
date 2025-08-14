@@ -1,0 +1,15 @@
+[Unit]
+Description=Falcon Cloud Sync Service
+After=network-online.target
+
+[Service]
+User=root
+# !!! CHANGE THIS PATH !!!
+WorkingDirectory=/home/jetson/falcon_monitor/
+# !!! CHANGE THIS PATH !!!
+ExecStart=/usr/bin/python3 /home/jetson/falcon_monitor/cloud_sync.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
