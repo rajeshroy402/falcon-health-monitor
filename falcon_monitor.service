@@ -1,0 +1,24 @@
+[Unit]
+Description=Falcon Health Monitor Service
+After=network-online.target
+
+[Service]
+# The user to run the script as. 'root' is needed for hardware access.
+User=root
+
+# The absolute path to the directory containing your script and ips.json.
+# !!! IMPORTANT: CHANGE THIS TO YOUR SCRIPT'S DIRECTORY !!!
+WorkingDirectory=/home/jetson/falcon_monitor/
+
+# The command to execute the script. Use absolute paths.
+# !!! IMPORTANT: CHANGE THIS TO YOUR SCRIPT'S PATH !!!
+ExecStart=/usr/bin/python3 /home/jetson/falcon_monitor/falcon_monitor.py
+
+# Automatically restart the service if it fails.
+Restart=always
+
+# Wait 10 seconds before trying to restart.
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
